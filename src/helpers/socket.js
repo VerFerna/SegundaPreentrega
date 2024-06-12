@@ -70,7 +70,7 @@ export default function socketioHandler(httpServer) {
     //Recibe del front - Eliminacion de producto (en carrito)
     socket.on("client:deleteProductOnCart", async (data) => {
       try {
-        const cid = "65fb8308f303ee5626d8e88f";
+        const cid = "65f8aa9a22e956429a94e026";
         const pid = data;
 
         const deleteProductOnCart = await cartManager.deleteProductById(
@@ -89,7 +89,7 @@ export default function socketioHandler(httpServer) {
     //Recibe del front - Incorporacion de producto (en carrito)
     socket.on("client:addProductOnCart", async (data) => {
       try {
-        const cid = "65fb8308f303ee5626d8e88f";
+        const cid = "65f8aa9a22e956429a94e026";
         const pid = data.id;
         const quantity = data.selectedQuantity > 1 ? data.selectedQuantity : 1
 
